@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/exemplo01-seletores.css">
+</head>
+
+<body>
+    <h1>Exemplos de Seletores</h1>
+    <h2>Seletor de Id</h2>
+    <form action="#" id="formulario-calculadora">
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2">
+        <button type="button" id="btn-somar" onclick="somar()">Somar</button>
+        <p id="resultado"></p>
+    </form>
+    <h2>Seletor de Classe</h2>
+    <div class="elementos">
+        <div>
+            <div class="item">Item 1 </div>
+            <div class="item">Item 2 </div>
+            <div class="item">Item 3 </div>
+            <div class="item">Item 4 </div>
+        </div>
+        <button onclick="definirCor(`azul`)">Azul</button>
+        <button onclick="definirCor(`preto`)">Preto</button>
+        <button onclick="definirCor(`roxo`)">Roxo</button>
+        <button onclick="definirCor(`verde`)">Verde</button>
+        <button onclick="definirCor(`vermelho`)">Vermelho</button>
+    </div>
+
+    <h2>Seletor de Tag</h2>
+    <div>
+        <iframe src="https://giphy.com/embed/hDMJjUNxLhIjK" width="100" height="100" style="" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+    <h2>Seletor de Name</h2>
+    <div>
+        <label for="campo-nome">Nome</label>
+        <input type="text" id="campo-nome" name="nome">
+        <label for="campo-sobrenome">Sobrenome</label>
+        <input type="text" onkeyup="apresentarNomeCompleto()" id="campo-sobrenome" name="sobrenome">
+        <button class="btn" onclick="apresentarNomeCompleto()">Apresentar nome completo</button>
+        <button class="btn" onclick="limparCampos()">Limpar Campos</button>
+        <p id="resultadoNomes"></p>
+    </div>
+
+    <h2>Seletor querySeletor e querySeletorAll</h2>
+    <div id="btn-acoes">
+        <button class="btn" onclick="exemploQuerySelector()">QuerySelector</button>
+        <button class="btn" onclick="exemploQuerySelectorAll()">QuerySelectorAll</button>
+        <button class="btn" onclick="reset()">Reset</button>
+    </div>
+    <div id="jogos"></div>
+    <script src="assets/js/exemplo01-seletores.js"></script>
+</body>
+
+</html>
