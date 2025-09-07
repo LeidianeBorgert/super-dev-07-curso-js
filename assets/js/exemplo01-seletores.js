@@ -119,7 +119,8 @@ function definirCor(nomeCor) {
 
 function alterarVisibilidade() {
     let iframes = document.getElementsByTagName("iframe");
-
+//sei que na nossa tela só tem um iframe, n vou fazer um for,
+//porem se tiver mais do que um é necessario utilizar  o for
 
     if (iframes[0].style.display === "inline") {
         iframes[0].style.display = "none";
@@ -157,7 +158,7 @@ function exemploQuerySelector() {
 }
 function exemploQuerySelectorAll() {
     let paragrafos = document.querySelectorAll("div#jogos p ");
-    for (i = 0; i < paragrafos.length; i = i + 1) {
+    for (i = 0; i < paragrafos.length; i += 1) {
         let paragrafo = paragrafos[i];
         if (i % 2 == 0) {
             //adicionar uma classe destaque ao elemento
