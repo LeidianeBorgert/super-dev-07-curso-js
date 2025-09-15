@@ -23,7 +23,7 @@ function criarTarefa() {
     input.id = "campo-tarefa";
     input.setAttribute("type", "text");
     input.placeholder = "Digite sua tarefa."
-    input.addEventListener("keyup",clicarEnter);
+    input.addEventListener("keyup", clicarEnter);
 
     let label = document.createElement("label");
     label.setAttribute("for", "campo-tarefa");
@@ -63,20 +63,28 @@ function criarBotaoRegistrar() {
 function registrar() {
     let input = document.getElementById("campo-tarefa");
     let inputData = document.getElementById("campo-data");
+    let inputCheckbox = document.getElementById("campo-check");
+
     let item = input.value;
     let itemData = inputData.value;
-    criarItem(`${item} Data a realizar: ${itemData}`);
-  
+    let itemCheck = inputCheckbox.value;
+
+    criarItem(`${item} Data a realizar: ${itemData}   ${itemCheck}`);
+
 
 
     input.value = "";
     input.focus()
     inputData.value = "";
     inputData.focus()
+    inputCheckbox.value = "";
+    inputCheckbox.focus()
+
+
 }
 //EVENTO DE CLICAR ENTER PARA ENVIAR
-function clicarEnter(evento){
-    if(evento.key === "Enter"){
+function clicarEnter(evento) {
+    if (evento.key === "Enter") {
         registrar();
     }
 
@@ -85,7 +93,7 @@ function criarData() {
     let input = document.createElement("input");
     input.id = "campo-data";
     input.setAttribute("type", "date");
-    input.addEventListener("keyup",clicarEnter);
+    input.addEventListener("keyup", clicarEnter);
 
     let label = document.createElement("label");
     label.setAttribute("for", "campo-data");
@@ -94,11 +102,110 @@ function criarData() {
     body.appendChild(label);
     body.appendChild(input);
 }
+function criarInputCheckbox() {
+    let input = document.createElement("input");
+    input.id = "campo-check";
+    input.setAttribute("type", "checkbox");
+    input.addEventListener("keyup", clicarEnter);
 
-criarTitulo()
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-check");
+    label.innerText = "Assinale sua Tarefa: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+
+function criarInputNumber() {
+    let input = document.createElement("input");
+    input.id = "campo-numero";
+    input.setAttribute("type", "number");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-numero");
+    label.innerText = "Escolha um número: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+function criarInputColor() {
+    let input = document.createElement("input");
+    input.id = "campo-cor";
+    input.setAttribute("type", "color");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-cor");
+    label.innerText = "Escolha uma cor: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+function criarInputSearch() {
+    let input = document.createElement("input");
+    input.id = "campo-procurar";
+    input.setAttribute("type", "search");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-procurar");
+    label.innerText = "Procure uma opção: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+
+function criarInputFile() {
+    let input = document.createElement("input");
+    input.id = "campo-arquivo";
+    input.setAttribute("type", "file");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-arquivo");
+    label.innerText = "Selecione um arquivo: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+function criarInputRadio() {
+    let input = document.createElement("input");
+    input.id = "campo-radio";
+    input.setAttribute("type", "radio");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-radio");
+    label.innerText = "Selecione: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+function criarInputRange() {
+    let input = document.createElement("input");
+    input.id = "campo-range";
+    input.setAttribute("type", "range");
+    input.addEventListener("keyup", clicarEnter);
+
+    let label = document.createElement("label");
+    label.setAttribute("for", "campo-range");
+    label.innerText = "Selecione: ";
+
+    body.appendChild(label);
+    body.appendChild(input);
+}
+
+criarTitulo();
 criarParagrafo();
 criarListaOrdenada();
 criarTarefa();
 criarBotaoRegistrar();
 criarData();
-
+criarInputCheckbox();
+criarInputNumber();
+criarInputColor();
+criarInputSearch();
+criarInputFile();
+criarInputRadio();
+criarInputRange();
