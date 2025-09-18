@@ -97,7 +97,7 @@ Gerar um JSON com 10 colaboradores com idades entre 18 e 35 anos
 */
 
 
-//criar uma nova lista de string com os nome dos colaoradores
+//criar uma nova lista de string com os nome dos colaboradores
 let colaboradorNome = colaboradores.map(colaborador => {
     return colaborador.nome;
 });
@@ -117,7 +117,7 @@ let colaboradoresSalariosBrutos = colaboradores.map(colaborador => {
 //criar uma lista com o nome e calcular a idade do colaborador
 
 let colaboradoresIdades = colaboradores.map(colaborador => {
-    //pegando a data e hora atual do avegador
+    //pegando a data e hora atual do navegador
     let dataHoje = new Date();
     //pegaar o ano total
     let anoAtual = dataHoje.getFullYear();
